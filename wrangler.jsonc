@@ -1,0 +1,19 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "enemflashc-enem",
+  "compatibility_date": "2026-08-31",
+  "assets": {
+    "directory": ".",
+    "exclude": [
+      ".git/**",
+      ".github/**",
+      "node_modules/**",
+      "README.md",
+      "server.js",
+      "*.pdf",
+      "*.png",
+      "Referencias CT/**",
+      "Captura de tela*.png"
+    ]
+  }
+}
