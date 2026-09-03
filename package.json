@@ -1,0 +1,13 @@
+{
+  "name": "enemflashc-enem",
+  "version": "1.0.0",
+  "description": "Flashcards ENEM 2026 Landing Page",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "build": "echo 'Build complete'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
