@@ -1162,3 +1162,6 @@ body main #planos .grid > div li span {
 
 main > section:first-child h1 span { color: #7045F5 !important; }
 main > section:first-child h1 span:last-child { color: #101A3D !important; }
+
+#bonus .bonus-compact-list__title,
+#bonus .bonus-compact-list h3 { color: #7045F5 !important; }
