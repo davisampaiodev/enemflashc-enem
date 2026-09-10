@@ -248,6 +248,227 @@ a.checkout-link:hover,
   box-shadow: 0 6px 20px 0 rgba(31, 41, 55, 0.15) !important;
 }
 
+/* Final palette-only overrides. */
+:root { --lp-bg: #F8FAFF; --lp-ink: #101A3D; --lp-indigo: #3147F6; --lp-yellow: #7045F5; --lp-card: #FFFFFF; }
+html, body { background-color: #F8FAFF; color: #47516B; }
+main > section { border-color: #E5E9F5 !important; }
+main > section[class*="bg-[#F7F4EA]"], main > section[class*="bg-[#FAF9F5]"], main > section[class*="bg-secondary"] { background-color: #F1F4FF !important; }
+.bg-secondary { background-color: #F1F4FF !important; }
+.bg-background { background-color: #F8FAFF !important; }
+.text-navy, .text-navy-foreground { color: #101A3D !important; }
+.text-primary { color: #3147F6 !important; }
+.text-muted-foreground { color: #717B96 !important; }
+.border-border { border-color: #DDE3F5 !important; }
+.border-gold, .border-primary, .border-indigo, .border-\[\#4F46E5\] { border-color: #7045F5 !important; }
+.bg-primary-subtle, .bg-indigo-subtle, .bg-\[\#EEF2FF\] { background-color: #EEF0FF !important; color: #5945E8 !important; border-color: #DDE3F5 !important; }
+.bg-gold { background-color: #EEF0FF !important; }
+.fill-gold { fill: #7045F5 !important; }
+
+a[href="#planos"], a[href*="cakto.com.br"], a.checkout-link, .btn-cta-main, .btn-cta-secondary, .tech-cta-teal, .tech-cta-outline {
+  background: linear-gradient(135deg, #3147F6 0%, #7045F5 100%) !important;
+  color: #FFFFFF !important;
+  border-color: #3147F6 !important;
+  box-shadow: 0 4px 14px 0 rgba(49, 71, 246, .07) !important;
+}
+a[href="#planos"]:hover, a[href*="cakto.com.br"]:hover, a.checkout-link:hover, .btn-cta-main:hover, .btn-cta-secondary:hover, .tech-cta-teal:hover, .tech-cta-outline:hover {
+  background: linear-gradient(135deg, #243BFF 0%, #6C3BFF 100%) !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 6px 20px 0 rgba(108, 59, 255, .12) !important;
+}
+
+#planos .grid > div { background-color: #FFFFFF !important; border-color: #DDE3F5 !important; box-shadow: 0 10px 25px rgba(49, 71, 246, .07) !important; }
+#planos .grid > div:first-child { border-top-color: rgba(49, 71, 246, .22) !important; }
+#planos .grid > div:last-child { border-color: #7045F5 !important; box-shadow: 0 18px 38px rgba(108, 59, 255, .12) !important; }
+#planos .grid > div:last-child .bg-gold { background-color: #EEF0FF !important; color: #5945E8 !important; border-color: #DDE3F5 !important; }
+#planos .grid .text-4xl { color: #101A3D !important; }
+#planos .grid > div:last-child .plan-card-title__number, #planos .grid > div:last-child .text-5xl { color: #7045F5 !important; }
+#planos .plan-card-title { color: #101A3D; }
+
+/* Section-specific price hierarchy: colors only. */
+#planos .grid > div:first-child { background-color: #FFFFFF !important; border-color: #DDE3F5 !important; box-shadow: 0 10px 25px rgba(32, 48, 110, .06) !important; }
+#planos .grid > div:first-child .text-4xl { color: #243BFF !important; }
+#planos .grid > div:first-child a.checkout-link { background: #EEF0FF !important; color: #3147F6 !important; border-color: #D5DBFF !important; box-shadow: 0 8px 16px rgba(49, 71, 246, .07) !important; }
+#planos .grid > div:first-child a.checkout-link:hover { background: #E3E7FF !important; color: #263CEB !important; }
+#planos .grid > div:last-child { background: linear-gradient(180deg, #FFFFFF 0%, #F8F6FF 100%) !important; border-color: #6C3BFF !important; box-shadow: 0 18px 38px rgba(108, 59, 255, .16) !important; }
+#planos .grid > div:last-child .bg-gold { background: linear-gradient(135deg, #3147F6 0%, #7045F5 100%) !important; color: #FFFFFF !important; border-color: transparent !important; }
+#planos .grid > div:last-child .text-5xl, #planos .grid > div:last-child .plan-card-title__number { color: #5B3DF5 !important; }
+#planos .grid > div:last-child a.checkout-link { background: linear-gradient(135deg, #3147F6 0%, #7045F5 100%) !important; color: #FFFFFF !important; border-color: #3147F6 !important; box-shadow: 0 8px 16px rgba(108, 59, 255, .12) !important; }
+#planos .grid > div:last-child a.checkout-link:hover { background: linear-gradient(135deg, #263CEB 0%, #6036E8 100%) !important; color: #FFFFFF !important; }
+
+#bonus .bonus-compact-list article { background-color: #FFFFFF; border-color: #DDE3F5; }
+#bonus .bonus-compact-list__title, #bonus .bonus-compact-list h3 { color: #101A3D; }
+#bonus .bonus-compact-list p { color: #47516B; }
+.BiologyFlashcardReference { border-color: rgba(49, 71, 246, .28) !important; box-shadow: 12px 16px 0 rgba(108, 59, 255, .12), 0 28px 55px rgba(32, 48, 110, .06) !important; }
+.BiologyFlashcardReference::after { background-color: #EEF0FF; border-color: #DDE3F5; }
+.BiologyFlashcardReference .diagrama-membrana { background-color: #F8FAFF !important; border-color: rgba(49, 71, 246, .16) !important; }
+.BiologyFlashcardReference .box-como-cai { background-color: rgba(49, 71, 246, .07) !important; border-color: rgba(108, 59, 255, .26) !important; }
+.BiologyFlashcardReference svg path[stroke="#475569"] { stroke: #3147F6 !important; }
+.BiologyFlashcardReference svg [fill="#F59E0B"] { fill: #7045F5 !important; }
+
+/* Título gráfico dos cards de preço */
+#planos .plan-card-title {
+  display: grid;
+  justify-items: center;
+  color: #062a5b;
+  line-height: .78;
+  text-align: center;
+}
+
+#planos .plan-card-title__number {
+  position: relative;
+  z-index: 1;
+  font-family: Arial Black, Arial, sans-serif;
+  font-size: clamp(4.8rem, 12vw, 6.8rem);
+  font-weight: 950;
+  letter-spacing: -.11em;
+}
+
+#planos .plan-card-title__label {
+  margin-top: .25rem;
+  font-family: Arial Black, Arial, sans-serif;
+  font-size: clamp(1.45rem, 4vw, 2.05rem);
+  font-weight: 950;
+  letter-spacing: -.055em;
+  line-height: .91;
+}
+
+@media (max-width: 640px) {
+  #planos .plan-card-title__number { font-size: clamp(4.5rem, 23vw, 6rem); }
+  #planos .plan-card-title__label { font-size: clamp(1.35rem, 7.3vw, 1.8rem); }
+}
+
+/* O destaque violeta fica exclusivamente no plano completo. */
+#planos .grid > div:first-child .text-4xl {
+  color: #1F2937 !important;
+}
+
+#planos .grid > div:last-child .plan-card-title__number,
+#planos .grid > div:last-child .text-5xl {
+  color: #4F46E5 !important;
+}
+
+/* Bônus reunidos em um único bloco, sem a grade extensa de cards. */
+#bonus > div > .grid {
+  display: none !important;
+}
+
+#bonus .bonus-compact-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .75rem;
+  margin-bottom: 1.75rem;
+}
+
+#bonus .bonus-compact-list__title {
+  grid-column: 1 / -1;
+  color: #0F172A;
+  font-size: 1rem;
+  font-weight: 800;
+  letter-spacing: .04em;
+  text-align: center;
+}
+
+#bonus .bonus-compact-list article {
+  padding: .9rem 1rem;
+  border: 1px solid #E2E8F0;
+  border-radius: .9rem;
+  background: #FAF9F5;
+}
+
+#bonus .bonus-compact-list article:last-child {
+  grid-column: 1 / -1;
+}
+
+#bonus .bonus-compact-list h3 {
+  color: #0F172A;
+  font-size: .82rem;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+#bonus .bonus-compact-list p {
+  margin-top: .35rem;
+  color: #475569;
+  font-size: .75rem;
+  line-height: 1.45;
+}
+
+#bonus .bonus-compact-list + .grid { display: none !important; }
+
+@media (max-width: 640px) {
+  #bonus .bonus-compact-list { grid-template-columns: 1fr; }
+  #bonus .bonus-compact-list article:last-child { grid-column: auto; }
+}
+
+/* Paleta azul-violeta: somente substituições de cor. */
+:root {
+  --lp-bg: #F8FAFF;
+  --lp-ink: #101A3D;
+  --lp-indigo: #3147F6;
+  --lp-yellow: #7045F5;
+  --lp-card: #FFFFFF;
+}
+
+html, body { background-color: #F8FAFF; color: #47516B; }
+main > section { border-color: #E5E9F5 !important; }
+main > section[class*="bg-[#F7F4EA]"],
+main > section[class*="bg-[#FAF9F5]"],
+main > section[class*="bg-secondary"] { background-color: #F1F4FF !important; }
+.bg-secondary { background-color: #F1F4FF !important; }
+.bg-background { background-color: #F8FAFF !important; }
+.text-navy, .text-navy-foreground { color: #101A3D !important; }
+.text-primary { color: #3147F6 !important; }
+.text-muted-foreground { color: #717B96 !important; }
+.border-border { border-color: #DDE3F5 !important; }
+.border-gold, .border-primary, .border-indigo, .border-\[\#4F46E5\] { border-color: #7045F5 !important; }
+.bg-primary-subtle, .bg-indigo-subtle, .bg-\[\#EEF2FF\] { background-color: #EEF0FF !important; color: #5945E8 !important; border-color: #DDE3F5 !important; }
+.bg-gold { background-color: #EEF0FF !important; }
+.fill-gold { fill: #7045F5 !important; }
+
+a[href="#planos"],
+a[href*="cakto.com.br"],
+a.checkout-link,
+.btn-cta-main,
+.btn-cta-secondary,
+.tech-cta-teal,
+.tech-cta-outline {
+  background: linear-gradient(135deg, #3147F6 0%, #7045F5 100%) !important;
+  color: #FFFFFF !important;
+  border-color: #3147F6 !important;
+  box-shadow: 0 4px 14px 0 rgba(49, 71, 246, .07) !important;
+}
+
+a[href="#planos"]:hover,
+a[href*="cakto.com.br"]:hover,
+a.checkout-link:hover,
+.btn-cta-main:hover,
+.btn-cta-secondary:hover,
+.tech-cta-teal:hover,
+.tech-cta-outline:hover {
+  background: linear-gradient(135deg, #243BFF 0%, #6C3BFF 100%) !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 6px 20px 0 rgba(108, 59, 255, .12) !important;
+}
+
+#planos .grid > div { background-color: #FFFFFF !important; border-color: #DDE3F5 !important; box-shadow: 0 10px 25px rgba(49, 71, 246, .07) !important; }
+#planos .grid > div:first-child { border-top-color: rgba(49, 71, 246, .22) !important; }
+#planos .grid > div:last-child { border-color: #7045F5 !important; box-shadow: 0 18px 38px rgba(108, 59, 255, .12) !important; }
+#planos .grid > div:last-child .bg-gold { background-color: #EEF0FF !important; color: #5945E8 !important; border-color: #DDE3F5 !important; }
+#planos .grid .text-4xl { color: #101A3D !important; }
+#planos .grid > div:last-child .plan-card-title__number,
+#planos .grid > div:last-child .text-5xl { color: #7045F5 !important; }
+#planos .plan-card-title { color: #101A3D; }
+
+#bonus .bonus-compact-list article { background-color: #FFFFFF; border-color: #DDE3F5; }
+#bonus .bonus-compact-list__title, #bonus .bonus-compact-list h3 { color: #101A3D; }
+#bonus .bonus-compact-list p { color: #47516B; }
+.BiologyFlashcardReference { border-color: rgba(49, 71, 246, .28) !important; box-shadow: 12px 16px 0 rgba(108, 59, 255, .12), 0 28px 55px rgba(32, 48, 110, .06) !important; }
+.BiologyFlashcardReference::after { background-color: #EEF0FF; border-color: #DDE3F5; }
+.BiologyFlashcardReference .diagrama-membrana { background-color: #F8FAFF !important; border-color: rgba(49, 71, 246, .16) !important; }
+.BiologyFlashcardReference .box-como-cai { background-color: rgba(49, 71, 246, .07) !important; border-color: rgba(108, 59, 255, .26) !important; }
+.BiologyFlashcardReference svg path[stroke="#475569"] { stroke: #3147F6 !important; }
+.BiologyFlashcardReference svg [fill="#F59E0B"] { fill: #7045F5 !important; }
+
 /* Final price-card hierarchy override. */
 #planos > div > .grid > div:last-child { border-color: #4F46E5 !important; }
 #planos > div > .grid > div:last-child .bg-gold { background-color: rgba(246,201,69,.27) !important; }
@@ -903,4 +1124,38 @@ a.checkout-link:hover,
   background-color: #EABF32 !important;
   color: #1F2937 !important;
   box-shadow: 0 6px 20px 0 rgba(31, 41, 55, 0.15) !important;
+}
+
+/* Palette enforcement — intentionally appended after legacy color rules. */
+main [class*="text-[#1F2937]"], main [class*="text-[#0F172A]"], main [class*="text-[#1E293B]"] { color: #101A3D !important; }
+main [class*="text-[#475569]"] { color: #47516B !important; }
+main [class*="text-[#2563EB]"] { color: #3147F6 !important; }
+main [class*="text-[#4338CA]"], main [class*="text-[#4F46E5]"] { color: #5945E8 !important; }
+main [class*="bg-[#F7F4EA]"], main [class*="bg-[#FAF9F5]"] { background-color: #F1F4FF !important; }
+main [class*="border-[#E2E8F0]"], main [class*="border-[#1F2937]"] { border-color: #DDE3F5 !important; }
+a[href="#planos"], a[href*="cakto.com.br"], a.checkout-link, .btn-cta-main, .btn-cta-secondary, .tech-cta-teal, .tech-cta-outline { background: linear-gradient(135deg, #3147F6 0%, #7045F5 100%) !important; color: #FFFFFF !important; border-color: #3147F6 !important; box-shadow: 0 4px 14px 0 rgba(49, 71, 246, .07) !important; }
+a[href="#planos"]:hover, a[href*="cakto.com.br"]:hover, a.checkout-link:hover, .btn-cta-main:hover, .btn-cta-secondary:hover, .tech-cta-teal:hover, .tech-cta-outline:hover { background: linear-gradient(135deg, #243BFF 0%, #6C3BFF 100%) !important; color: #FFFFFF !important; box-shadow: 0 6px 20px 0 rgba(108, 59, 255, .12) !important; }
+#planos .grid > div { background-color: #FFFFFF !important; border-color: #DDE3F5 !important; box-shadow: 0 10px 25px rgba(49, 71, 246, .07) !important; }
+#planos .grid > div:last-child { border-color: #7045F5 !important; box-shadow: 0 18px 38px rgba(108, 59, 255, .12) !important; }
+#planos .grid > div:last-child .bg-gold { background-color: #EEF0FF !important; color: #5945E8 !important; border-color: #DDE3F5 !important; }
+#planos .grid .text-4xl { color: #101A3D !important; }
+#planos .grid > div:last-child .plan-card-title__number, #planos .grid > div:last-child .text-5xl { color: #7045F5 !important; }
+#planos .plan-card-title { color: #101A3D; }
+
+/* Final, high-specificity price palette override — colors only. */
+body main #planos .grid > div:first-child { background-color: #FFFFFF !important; border-color: #DDE3F5 !important; box-shadow: 0 10px 25px rgba(32, 48, 110, .06) !important; }
+body main #planos .grid > div:first-child .text-4xl { color: #101A3D !important; }
+body main #planos .grid > div:first-child a.checkout-link { background: #EEF0FF !important; color: #3147F6 !important; border-color: #D5DBFF !important; box-shadow: 0 8px 16px rgba(49, 71, 246, .07) !important; }
+body main #planos .grid > div:first-child a.checkout-link:hover { background: #E3E7FF !important; color: #263CEB !important; }
+body main #planos .grid > div:last-child { background: linear-gradient(180deg, #FFFFFF 0%, #F8F6FF 100%) !important; border-color: #6C3BFF !important; box-shadow: 0 18px 38px rgba(108, 59, 255, .16) !important; }
+body main #planos .grid > div:last-child > div:first-child .bg-gold { background: linear-gradient(135deg, #3147F6 0%, #7045F5 100%) !important; color: #FFFFFF !important; border-color: transparent !important; }
+body main #planos .grid > div:last-child .plan-card-title__number, body main #planos .grid > div:last-child .text-5xl { color: #5B3DF5 !important; }
+body main #planos .grid > div:last-child a.checkout-link { background: linear-gradient(135deg, #3147F6 0%, #7045F5 100%) !important; color: #FFFFFF !important; border-color: #3147F6 !important; box-shadow: 0 8px 16px rgba(108, 59, 255, .12) !important; }
+body main #planos .grid > div:last-child a.checkout-link:hover { background: linear-gradient(135deg, #263CEB 0%, #6036E8 100%) !important; color: #FFFFFF !important; }
+
+/* Legibilidade do conteúdo dos cards de preço. */
+body main #planos .grid > div .text-muted-foreground,
+body main #planos .grid > div li span {
+  color: #101A3D !important;
+  font-weight: 700 !important;
 }
