@@ -1159,3 +1159,6 @@ body main #planos .grid > div li span {
   color: #101A3D !important;
   font-weight: 700 !important;
 }
+
+main > section:first-child h1 span { color: #7045F5 !important; }
+main > section:first-child h1 span:last-child { color: #101A3D !important; }
