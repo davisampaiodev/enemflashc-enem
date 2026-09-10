@@ -248,6 +248,30 @@ a.checkout-link:hover,
   box-shadow: 0 6px 20px 0 rgba(31, 41, 55, 0.15) !important;
 }
 
+/* Final price-card hierarchy override. */
+#planos > div > .grid > div:last-child { border-color: #4F46E5 !important; }
+#planos > div > .grid > div:last-child .bg-gold { background-color: rgba(246,201,69,.27) !important; }
+#planos > div > .grid > div:first-child a.checkout-link { background-color: #4F46E5 !important; color: #FFFFFF !important; }
+#planos > div > .grid > div:last-child a.checkout-link { background-color: #F6C945 !important; color: #1F2937 !important; }
+
+/* Pricing hierarchy: the offer itself leads; yellow is only a restrained accent. */
+#planos .grid { gap: clamp(1.25rem, 2.2vw, 2rem) !important; }
+#planos .grid > div { position: relative; background: #FFFFFF !important; border: 1px solid rgba(31,41,55,.14) !important; box-shadow: 0 10px 25px rgba(31,41,55,.07) !important; }
+#planos .grid > div:first-child { border-top: 4px solid rgba(79,70,229,.22) !important; }
+#planos .grid > div:last-child { border: 2px solid #4F46E5 !important; border-top-width: 5px !important; transform: translateY(-4px) !important; box-shadow: 0 18px 38px rgba(79,70,229,.16) !important; }
+#planos .grid > div:last-child > div:first-child { margin-bottom: .8rem !important; }
+#planos .grid > div:last-child .bg-gold { background: rgba(246,201,69,.27) !important; color: #1F2937 !important; border: 1px solid rgba(246,169,34,.5) !important; }
+#planos .grid h3 { color: #1F2937 !important; font-size: 1.35rem !important; }
+#planos .grid .text-4xl { color: #4F46E5 !important; font-size: clamp(2.55rem,4vw,3.25rem) !important; letter-spacing: -.05em; line-height: 1; }
+#planos .grid > div:last-child .text-4xl { color: #1F2937 !important; }
+#planos .grid a.checkout-link { background: #4F46E5 !important; color: #FFFFFF !important; border-color: #4F46E5 !important; box-shadow: 0 8px 16px rgba(79,70,229,.2) !important; }
+#planos .grid a.checkout-link:hover { background: #3F37C9 !important; }
+#planos .grid > div:last-child a.checkout-link { background: #F6C945 !important; color: #1F2937 !important; border-color: #E8B61F !important; box-shadow: 0 8px 16px rgba(246,201,69,.24) !important; }
+#planos .grid > div:last-child a.checkout-link:hover { background: #F6C945 !important; }
+#planos .grid > div:last-child::before { content:""; position:absolute; inset:8px; z-index:0; border:1px solid rgba(79,70,229,.1); border-radius:.85rem; pointer-events:none; }
+#planos .grid > div > * { position:relative; z-index:1; }
+@media (max-width:640px) { #planos .grid > div:last-child { transform:none !important; } }
+
 /* Visual refinement layer — keeps the existing commercial structure intact. */
 :root {
   --lp-bg: #F7F4EA;
@@ -309,7 +333,29 @@ div:has(> div > #testimonial-track) + p { display: none !important; }
 #bonus .grid > div { padding: 1.15rem !important; box-shadow: 0 8px 20px rgba(31,41,55,.06); }
 #bonus .grid > div > div:first-child { margin-bottom: .65rem !important; }
 #planos .grid > div { border-color: rgba(31,41,55,.16) !important; }
-#planos .grid > div:last-child { border-color: var(--lp-yellow) !important; box-shadow: 0 18px 38px rgba(31,41,55,.16) !important; transform: translateY(-4px); }
+#planos .grid > div:last-child { border-color: #4F46E5 !important; box-shadow: 0 18px 38px rgba(79,70,229,.16) !important; transform: translateY(-4px); }
+#planos > div > .grid > div > div > h3 {
+  text-align: center !important;
+  font-size: clamp(1.55rem, 2.4vw, 1.9rem) !important;
+  line-height: 1.08 !important;
+  letter-spacing: -.035em !important;
+}
+#planos > div > .grid > div > div > h3 + p {
+  text-align: center !important;
+  margin-top: .45rem !important;
+}
+#planos > div > .grid > div > div > h3 + p + p {
+  text-align: center !important;
+  margin-inline: auto;
+  max-width: 25rem;
+}
+#planos > div > .grid > div { text-align: center !important; }
+#planos > div > .grid > div ul { display: grid !important; justify-items: center; }
+#planos > div > .grid > div li { justify-content: center !important; text-align: center !important; }
+#planos > div > .grid > div li span { text-align: center !important; }
+#planos > div > .grid > div > div:last-child > p { text-align: center !important; }
+#planos > div > .grid > div p,
+#planos > div > .grid > div li span { font-weight: 700 !important; }
 #planos .grid > div:last-child .text-3xl, #planos .grid > div:last-child .text-4xl { color: var(--lp-indigo) !important; }
 #planos .grid > div:last-child + p, #planos .grid + p { font-weight: 800 !important; color: var(--lp-indigo) !important; }
 section:has(svg.lucide-shield-check), section:has(svg.lucide-shield) { background: rgba(167,215,197,.28) !important; }
