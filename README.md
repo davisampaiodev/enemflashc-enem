@@ -15,6 +15,4 @@ Landing Page de alta conversão para venda de Flashcards ENEM 2026.
 ## 🛠️ Tecnologias Utilizadas
 - HTML5 / Tailwind CSS
 - Vanilla JavaScript
-- Meta Pixel (`1808339393692374`)
-- Utmify & Preservação Automática de UTMs
 - Checkout Cakto Integrado
