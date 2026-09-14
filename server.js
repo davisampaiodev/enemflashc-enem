@@ -1,6 +1,7 @@
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
+const zlib = require('zlib');
 
 const DEFAULT_PORT = 3000;
 const PUBLIC_DIR = __dirname;
@@ -39,7 +40,8 @@ function createServer() {
     }
 
     if (!fs.existsSync(filePath)) {
-      filePath = path.join(PUBLIC_DIR, 'index.html');
+      res.writeHead(404, { 'Content-Type': 'text/plain; charset=utf-8' });
+      return res.end('Arquivo não encontrado');
     }
 
     const ext = path.extname(filePath).toLowerCase();
@@ -50,13 +52,40 @@ function createServer() {
         res.writeHead(500, { 'Content-Type': 'text/plain; charset=utf-8' });
         res.end('Erro interno do servidor');
       } else {
-        res.writeHead(200, {
+        const isHtml = ext === '.html';
+        const isCompressible = ['.html', '.css', '.js', '.json', '.svg'].includes(ext);
+        const cacheControl = isHtml
+          ? 'public, max-age=0, must-revalidate'
+          : 'public, max-age=31536000, immutable';
+        const headers = {
           'Content-Type': contentType,
-          'Cache-Control': 'no-store, no-cache, must-revalidate, proxy-revalidate, max-age=0',
-          'Pragma': 'no-cache',
-          'Expires': '0'
-        });
-        res.end(content);
+          'Cache-Control': cacheControl,
+          'Vary': 'Accept-Encoding'
+        };
+
+        const acceptedEncoding = req.headers['accept-encoding'] || '';
+        if (isCompressible && acceptedEncoding.includes('br')) {
+          zlib.brotliCompress(content, (compressionError, compressed) => {
+            if (compressionError) {
+              res.writeHead(200, headers);
+              return res.end(content);
+            }
+            res.writeHead(200, { ...headers, 'Content-Encoding': 'br' });
+            res.end(compressed);
+          });
+        } else if (isCompressible && acceptedEncoding.includes('gzip')) {
+          zlib.gzip(content, (compressionError, compressed) => {
+            if (compressionError) {
+              res.writeHead(200, headers);
+              return res.end(content);
+            }
+            res.writeHead(200, { ...headers, 'Content-Encoding': 'gzip' });
+            res.end(compressed);
+          });
+        } else {
+          res.writeHead(200, headers);
+          res.end(content);
+        }
       }
     });
   });
